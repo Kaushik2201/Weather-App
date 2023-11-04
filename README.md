@@ -46,7 +46,8 @@ I have used 3 free APIs of [openweathermap](https://openweathermap.org/).
 
 **For Deployed Link** - [weather-near-me](https://weather-near-me.netlify.app/)
 
+**Video Demo** - [Visit](https://www.loom.com/share/82e526ab3ccb4a1a9dfcf67c3f6c83d3?sid=d4d04773-8a14-4f93-ba85-841aa378eb80)
+
 **Build By** - [Kaushik V Kudchadkar](https://www.linkedin.com/in/kaushik-kudchadkar-23221a253/)
 
-**Video Demo Soon**
 
