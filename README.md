@@ -7,6 +7,7 @@
 
 
 **How it will do so ?**
+
 I have used 3 free APIs of [openweathermap](https://openweathermap.org/).
 
 1. Weather API - It will return weather forecast of 6 days (including today) by taking latitude and longitude of the place entered/captured.
