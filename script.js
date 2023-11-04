@@ -4,7 +4,6 @@ const weatherCardsDiv = document.querySelector(".weather-cards");
 const currentWeatherDiv = document.querySelector(".current-weather");
 const locationbtn = document.querySelector(".location-button");
 
-
 const API_KEY = "424e693098e98397588d5f8b341fa18e";
 
 const createWeatherCard = (cityName, WeatherItem, index) =>{
@@ -36,7 +35,7 @@ const createWeatherCard = (cityName, WeatherItem, index) =>{
 }
 
 const getWeatherDetails = (cityName, lat, lon) => {
-    const WEATHER_API_URL = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
+    const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
 
     fetch(WEATHER_API_URL).then(res => res.json()).then(data => {
 
@@ -72,7 +71,7 @@ const getCityCoordinates = () =>{
 
     if(!cityName) return;
 
-    const GEO_CODING_API_URL = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`;
+    const GEO_CODING_API_URL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`;
 
     fetch(GEO_CODING_API_URL).then(res => res.json()).then(data => {
         if(!data.length) return alert(`No coordinates found for ${cityName}`);
@@ -87,7 +86,7 @@ const getUserCoordinates = () => {
     navigator.geolocation.getCurrentPosition(
         position =>{
             const { latitude, longitude } = position.coords;
-            const REVERSE_GEOCODING_URL = `http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=1&appid=${API_KEY}`;
+            const REVERSE_GEOCODING_URL = `https://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=1&appid=${API_KEY}`;
             fetch(REVERSE_GEOCODING_URL).then(res => res.json()).then(data => {
                 const { name } = data[0];
                 getWeatherDetails(name, latitude, longitude);
